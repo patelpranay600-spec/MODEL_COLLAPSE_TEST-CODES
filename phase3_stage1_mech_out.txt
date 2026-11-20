@@ -1,0 +1,56 @@
+=== EVIDENCE TABLE (12 configurations; seeds 1-30; mean ± 95% half-width; n = seeds evaluated) ===
+config | n | fail var / tail / R3 [Wilson 95%] | W1 B-C | W1 B-R_h | A33 retention (C: .86) | non-rare inflow to R3 (C .026) | s/run | updates
+s0=smin c=0.05 10x10| 30 | 0.00[0.00,0.11] / 0.57[0.39,0.73] / 0.13[0.05,0.30] | -0.514±0.060 | +0.136±0.040 | 0.73±0.11 (n=28) | 0.014±0.003 | 10 | 100
+s0=1.0  c=0.05 10x10| 25 | 0.00[0.00,0.13] / 0.72[0.52,0.86] / 0.44[0.27,0.63] | -0.433±0.076 | +0.243±0.054 | 0.46±0.07 (n=23) | 0.038±0.006 | 10 | 100
+s0=2.5  c=0.05 10x10| 30 | 0.17[0.07,0.34] / 1.00[0.89,1.00] / 0.67[0.49,0.81] | -0.085±0.080 | +0.565±0.088 | 0.21±0.04 (n=28) | 0.066±0.010 | 10 | 100
+s0=smin c=0.2  10x10| 30 | 0.00[0.00,0.11] / 0.47[0.30,0.64] / 0.37[0.22,0.54] | -0.553±0.064 | +0.098±0.027 | 0.63±0.13 (n=28) | 0.013±0.004 | 10 | 100
+s0=1.0  c=0.2  10x10| 25 | 0.00[0.00,0.13] / 0.40[0.23,0.59] / 0.28[0.14,0.48] | -0.578±0.077 | +0.099±0.026 | 0.32±0.08 (n=23) | 0.030±0.007 | 10 | 100
+s0=2.5  c=0.2  10x10| 30 | 0.00[0.00,0.11] / 0.63[0.46,0.78] / 0.43[0.27,0.61] | -0.490±0.066 | +0.160±0.044 | 0.13±0.03 (n=28) | 0.040±0.008 | 10 | 100
+s0=smin c=0.05 20x20| 30 | 0.00[0.00,0.11] / 0.43[0.27,0.61] / 0.43[0.27,0.61] | -0.559±0.064 | +0.091±0.033 | 0.65±0.13 (n=29) | 0.010±0.003 | 40 | 400
+s0=1.0  c=0.05 20x20| 25 | 0.00[0.00,0.13] / 0.44[0.27,0.63] / 0.36[0.20,0.55] | -0.594±0.071 | +0.083±0.038 | 0.28±0.05 (n=24) | 0.030±0.006 | 39 | 400
+s0=2.5  c=0.05 20x20| 30 | 0.00[0.00,0.11] / 0.63[0.46,0.78] / 0.43[0.27,0.61] | -0.501±0.068 | +0.149±0.046 | 0.13±0.04 (n=29) | 0.038±0.008 | 39 | 400
+s0=smin c=0.2  20x20| 30 | 0.00[0.00,0.11] / 0.43[0.27,0.61] / 0.40[0.25,0.58] | -0.580±0.067 | +0.070±0.026 | 0.59±0.13 (n=29) | 0.012±0.004 | 40 | 400
+s0=1.0  c=0.2  20x20| 25 | 0.00[0.00,0.13] / 0.36[0.20,0.55] / 0.36[0.20,0.55] | -0.608±0.070 | +0.068±0.025 | 0.16±0.03 (n=24) | 0.031±0.007 | 39 | 400
+s0=2.5  c=0.2  20x20| 30 | 0.00[0.00,0.11] / 0.47[0.30,0.64] / 0.40[0.25,0.58] | -0.572±0.068 | +0.078±0.026 | 0.11±0.04 (n=29) | 0.030±0.007 | 39 | 400
+
+=== Q1 where is the distribution moved? region masses of the sample D_t (R-window mean), B vs C vs target (0.6998, 0.2702, 0.0300) ===
+C  : [0.6716 0.2781 0.0503]
+B ('smin', 0.2, 10, 10): [0.652  0.2493 0.0321]
+B ('smin', 0.2, 20, 20): [0.6776 0.2563 0.0327]
+B ('1.0', 0.2, 20, 20): [0.6708 0.254  0.0353]
+B ('2.5', 0.05, 10, 10): [0.5904 0.276  0.0669]
+(W1 cannot be decomposed by region: per-generation CDFs were not stored. Boundary-CDF errors above are the only region-level evidence available without new compute.)
+
+=== Q2 tail inflation ===
+Hypothesis (post hoc, from the structure of the operator): B's output is drawn at the final correction noise level s_min, then smoothed again by the KDE (h). Predicted law: P0*N_sqrt(h^2+s_min^2) vs reference-only P0*N_h.
+analytic tail mass: P0*N_0.6 0.0124 | per-seed P0*N_sqrt(h^2+s_min^2) mean 0.0237 (range 0.0143-0.0453)
+analytic variance ratio sqrt-model: 1+(h^2+s_min^2)/v0-ish -> (v0+h^2+s_min^2)/v0 mean 1.092 ; reference-only (v0+h^2)/v0 1.043
+config | observed B tail mean | per-seed corr(tail_B, double-smoothing prediction) | B/R_h tail ratio mean (95% HW)
+s0=smin c=0.05 10x10| 0.0299 | +0.58 | 2.42±0.25 | obs rv 1.158
+s0=1.0  c=0.05 10x10| 0.0318 | +0.03 | 2.71±0.21 | obs rv 1.301
+s0=2.5  c=0.05 10x10| 0.0616 | +0.31 | 5.31±0.48 | obs rv 1.606
+s0=smin c=0.2  10x10| 0.0242 | +0.77 | 1.96±0.29 | obs rv 1.088
+s0=1.0  c=0.2  10x10| 0.0219 | +0.31 | 1.86±0.20 | obs rv 1.133
+s0=2.5  c=0.2  10x10| 0.0288 | +0.71 | 2.37±0.28 | obs rv 1.203
+s0=smin c=0.05 20x20| 0.0239 | +0.76 | 1.95±0.27 | obs rv 1.103
+s0=1.0  c=0.05 20x20| 0.0218 | +0.34 | 1.86±0.21 | obs rv 1.152
+s0=2.5  c=0.05 20x20| 0.0290 | +0.71 | 2.39±0.28 | obs rv 1.201
+s0=smin c=0.2  20x20| 0.0242 | +0.80 | 1.98±0.29 | obs rv 1.098
+s0=1.0  c=0.2  20x20| 0.0205 | +0.43 | 1.75±0.22 | obs rv 1.105
+s0=2.5  c=0.2  20x20| 0.0247 | +0.81 | 2.04±0.29 | obs rv 1.093
+factor main effects on log(tail_B/tail_Rh), mean over seeds (bootstrap 95% over seeds):
+  c=0.2 minus c=0.05: -0.28 [-0.31,-0.25]
+  20x20 minus 10x10: -0.28 [-0.32,-0.24]
+  s0=1.0 minus s0=smin: -0.00 [-0.10,+0.08]
+  s0=2.5 minus s0=smin: +0.31 [+0.28,+0.35]
+
+=== Q3 what is transported? config-level relation between retention, inflow and W1 gap to reference-only ===
+across the 12 configurations (Pearson, descriptive only):
+  corr(A33, W1-R_h) = -0.19
+  corr(inflow, W1-R_h) = +0.80
+  corr(J3, W1-R_h) = +0.99
+  corr(A33, tail) = -0.16
+  corr(inflow, tail) = +0.74
+seed-level, within config s0=1.0 c=0.2 20x20: corr(A33, W1-R_h) and corr(inflow, W1-R_h)
+  n=24  -0.33  0.23
+lineage mass in D_t (w3) B vs C: C 0.0282 ; B(smin,.2,20x20) 0.0293 ; B(1.0,.2,20x20) 0.0336 ; reference lineage-3 fraction proxy via R_h rho3 mean 0.0283

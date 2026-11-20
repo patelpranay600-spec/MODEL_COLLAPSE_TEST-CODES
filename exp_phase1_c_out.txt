@@ -1,0 +1,112 @@
+=== PHASE 1, EXPERIMENT 3: recursion-aware bandwidth neighbourhood (same 40 paired seeds as earlier, archive 77001), full endpoint trade-off ===
+
+--- m=20  (mean v_hat=8.88; P(raw ref has zero tail points)=0.800)
+  REFERENCE-ONLY estimators:      W1            epsR(signed)   ltau          rv
+    raw                                  0.7455±0.044    0.2500       2.401    1.0515
+    KDE LOO                              0.8292±0.043    0.2870       2.037    1.2258
+    KDE Silverman                        0.8190±0.051    0.2515       2.214    1.1736
+    KDE fixed0.075                       0.7344±0.044    0.2500     -38.796    0.9996
+    KDE fixed0.1                         0.7308±0.044    0.2500     -21.635    1.0001
+    KDE infl eps=0.025                   0.7306±0.044    0.2500     -17.490    1.0002
+    KDE infl eps=0.05                    0.7246±0.044    0.2500      -8.579    1.0015
+    KDE infl eps=0.1                     0.7169±0.045    0.2500      -3.974    1.0042
+    KDE infl eps=0.2                     0.7087±0.045    0.2500      -1.378    1.0094
+    scale-mix (pop limit) @fixed0.1      0.6956±0.045    0.2492       0.091    1.0225
+    scale-mix (pop limit) @infl eps=0.05   0.7071±0.047    0.2437       1.472    1.0514
+  RECURSIVE C by bandwidth rule (window 55-59): mean h | W1  C-Ref(same h) | epsR | ltau median (P(tail<1e-3 tau0)) | rv | mean w3 P(w3=0@59)
+    fixed0.075       0.075 | 0.6998   -0.0346±0.0172 | +0.2299 | -0.601 (0.150) | 1.0048 | 0.0367 0.300
+    fixed0.1         0.100 | 0.6927   -0.0381±0.0178 | +0.2269 | +0.166 (0.025) | 1.0158 | 0.0367 0.300
+    infl eps=0.025   0.103 | 0.6987   -0.0319±0.0180 | +0.2277 | +0.847 (0.075) | 1.0183 | 0.0367 0.300
+    infl eps=0.05    0.145 | 0.7034   -0.0213±0.0196 | +0.2159 | +1.334 (0.025) | 1.0453 | 0.0367 0.300
+    infl eps=0.1     0.206 | 0.7323   +0.0153±0.0228 | +0.2154 | +2.037 (0.025) | 1.0984 | 0.0367 0.300
+    infl eps=0.2     0.291 | 0.8031   +0.0944±0.0294 | +0.2558 | +2.494 (0.000) | 1.2033 | 0.0367 0.300
+  best prespecified/rule-based C: fixed0.1 W1=0.6927; best reference-only (any listed, incl. oracle-free rules): scale-mix (pop limit) @fixed0.1 W1=0.6956; paired gap C-Ref = -0.0029±0.0172
+
+--- m=50  (mean v_hat=8.42; P(raw ref has zero tail points)=0.650)
+  REFERENCE-ONLY estimators:      W1            epsR(signed)   ltau          rv
+    raw                                  0.4967±0.029    0.0833       1.484    0.9975
+    KDE LOO                              0.5101±0.027    0.0895       1.553    1.0601
+    KDE Silverman                        0.5981±0.033    0.0835       2.000    1.1211
+    KDE fixed0.075                       0.4899±0.029    0.0833     -11.224    0.9782
+    KDE fixed0.1                         0.4878±0.029    0.0833      -6.487    0.9787
+    KDE infl eps=0.025                   0.4878±0.029    0.0833      -4.422    0.9788
+    KDE infl eps=0.05                    0.4843±0.029    0.0833      -2.215    0.9800
+    KDE infl eps=0.1                     0.4792±0.030    0.0833      -0.979    0.9825
+    KDE infl eps=0.2                     0.4731±0.030    0.0833      -0.144    0.9875
+    scale-mix (pop limit) @fixed0.1      0.4648±0.030    0.0829       0.457    1.0012
+    scale-mix (pop limit) @infl eps=0.05   0.4773±0.032    0.0826       1.329    1.0274
+  RECURSIVE C by bandwidth rule (window 55-59): mean h | W1  C-Ref(same h) | epsR | ltau median (P(tail<1e-3 tau0)) | rv | mean w3 P(w3=0@59)
+    fixed0.075       0.075 | 0.4884   -0.0015±0.0212 | +0.1112 | -0.035 (0.100) | 0.9991 | 0.0325 0.175
+    fixed0.1         0.100 | 0.4867   -0.0010±0.0215 | +0.1116 | +0.384 (0.050) | 1.0090 | 0.0325 0.175
+    infl eps=0.025   0.102 | 0.4908   +0.0030±0.0217 | +0.1123 | +0.567 (0.075) | 1.0110 | 0.0325 0.175
+    infl eps=0.05    0.144 | 0.5018   +0.0175±0.0223 | +0.1099 | +1.120 (0.000) | 1.0352 | 0.0325 0.175
+    infl eps=0.1     0.203 | 0.5413   +0.0621±0.0236 | +0.1263 | +1.714 (0.000) | 1.0834 | 0.0325 0.175
+    infl eps=0.2     0.287 | 0.6305   +0.1575±0.0274 | +0.1942 | +2.258 (0.000) | 1.1793 | 0.0325 0.175
+  best prespecified/rule-based C: fixed0.1 W1=0.4867; best reference-only (any listed, incl. oracle-free rules): scale-mix (pop limit) @fixed0.1 W1=0.4648; paired gap C-Ref = +0.0219±0.0216
+
+--- m=100  (mean v_hat=8.37; P(raw ref has zero tail points)=0.475)
+  REFERENCE-ONLY estimators:      W1            epsR(signed)   ltau          rv
+    raw                                  0.3582±0.022    0.0250       0.791    0.9917
+    KDE LOO                              0.3554±0.022    0.0270       1.210    1.0291
+    KDE Silverman                        0.4616±0.019    0.0252       1.884    1.0897
+    KDE fixed0.075                       0.3531±0.022    0.0250       0.570    0.9825
+    KDE fixed0.1                         0.3517±0.022    0.0250       0.545    0.9830
+    KDE infl eps=0.025                   0.3517±0.022    0.0250       0.518    0.9830
+    KDE infl eps=0.05                    0.3495±0.022    0.0250       0.458    0.9843
+    KDE infl eps=0.1                     0.3468±0.022    0.0250       0.429    0.9868
+    KDE infl eps=0.2                     0.3443±0.023    0.0250       0.521    0.9917
+    scale-mix (pop limit) @fixed0.1      0.3436±0.022    0.0247       0.918    1.0055
+    scale-mix (pop limit) @infl eps=0.05   0.3663±0.022    0.0259       1.328    1.0314
+  RECURSIVE C by bandwidth rule (window 55-59): mean h | W1  C-Ref(same h) | epsR | ltau median (P(tail<1e-3 tau0)) | rv | mean w3 P(w3=0@59)
+    fixed0.075       0.075 | 0.4129   +0.0597±0.0199 | +0.1009 | +0.190 (0.075) | 1.0023 | 0.0338 0.000
+    fixed0.1         0.100 | 0.4124   +0.0607±0.0204 | +0.1002 | +0.506 (0.000) | 1.0118 | 0.0338 0.000
+    infl eps=0.025   0.102 | 0.4150   +0.0634±0.0203 | +0.0998 | +0.522 (0.000) | 1.0125 | 0.0338 0.000
+    infl eps=0.05    0.144 | 0.4280   +0.0786±0.0210 | +0.0958 | +1.135 (0.000) | 1.0353 | 0.0338 0.000
+    infl eps=0.1     0.204 | 0.4670   +0.1203±0.0223 | +0.0971 | +1.697 (0.000) | 1.0812 | 0.0338 0.000
+    infl eps=0.2     0.288 | 0.5518   +0.2075±0.0251 | +0.1458 | +2.239 (0.000) | 1.1734 | 0.0338 0.000
+  best prespecified/rule-based C: fixed0.1 W1=0.4124; best reference-only (any listed, incl. oracle-free rules): scale-mix (pop limit) @fixed0.1 W1=0.3436; paired gap C-Ref = +0.0687±0.0207
+
+--- m=200  (mean v_hat=8.66; P(raw ref has zero tail points)=0.350)
+  REFERENCE-ONLY estimators:      W1            epsR(signed)   ltau          rv
+    raw                                  0.2545±0.016    0.0917       0.791    1.0257
+    KDE LOO                              0.2574±0.016    0.0914       0.749    1.0427
+    KDE Silverman                        0.3680±0.015    0.0904       1.761    1.1154
+    KDE fixed0.075                       0.2513±0.016    0.0917       0.098    1.0213
+    KDE fixed0.1                         0.2504±0.016    0.0917       0.101    1.0218
+    KDE infl eps=0.025                   0.2504±0.016    0.0917       0.104    1.0219
+    KDE infl eps=0.05                    0.2494±0.016    0.0917       0.149    1.0232
+    KDE infl eps=0.1                     0.2488±0.016    0.0917       0.290    1.0257
+    KDE infl eps=0.2                     0.2495±0.016    0.0916       0.370    1.0309
+    scale-mix (pop limit) @fixed0.1      0.2570±0.016    0.0913       0.766    1.0443
+    scale-mix (pop limit) @infl eps=0.05   0.2886±0.016    0.0929       1.227    1.0719
+  RECURSIVE C by bandwidth rule (window 55-59): mean h | W1  C-Ref(same h) | epsR | ltau median (P(tail<1e-3 tau0)) | rv | mean w3 P(w3=0@59)
+    fixed0.075       0.075 | 0.3234   +0.0721±0.0194 | +0.1317 | +0.379 (0.050) | 1.0312 | 0.0343 0.000
+    fixed0.1         0.100 | 0.3244   +0.0740±0.0195 | +0.1302 | +0.722 (0.000) | 1.0408 | 0.0343 0.000
+    infl eps=0.025   0.104 | 0.3266   +0.0762±0.0195 | +0.1304 | +0.738 (0.000) | 1.0428 | 0.0343 0.000
+    infl eps=0.05    0.147 | 0.3435   +0.0941±0.0195 | +0.1305 | +1.096 (0.000) | 1.0668 | 0.0343 0.000
+    infl eps=0.1     0.208 | 0.3954   +0.1466±0.0196 | +0.1439 | +1.676 (0.000) | 1.1150 | 0.0343 0.000
+    infl eps=0.2     0.294 | 0.5046   +0.2550±0.0207 | +0.2029 | +2.200 (0.000) | 1.2118 | 0.0343 0.000
+  best prespecified/rule-based C: fixed0.075 W1=0.3234; best reference-only (any listed, incl. oracle-free rules): KDE infl eps=0.1 W1=0.2488; paired gap C-Ref = +0.0745±0.0194
+
+--- m=400  (mean v_hat=8.51; P(raw ref has zero tail points)=0.200)
+  REFERENCE-ONLY estimators:      W1            epsR(signed)   ltau          rv
+    raw                                  0.1758±0.010    0.0458       0.098    1.0078
+    KDE LOO                              0.1738±0.010    0.0458       0.514    1.0207
+    KDE Silverman                        0.2725±0.009    0.0438       1.485    1.0796
+    KDE fixed0.075                       0.1734±0.010    0.0458       0.090    1.0060
+    KDE fixed0.1                         0.1727±0.010    0.0458       0.108    1.0065
+    KDE infl eps=0.025                   0.1727±0.010    0.0458       0.104    1.0066
+    KDE infl eps=0.05                    0.1716±0.010    0.0458       0.124    1.0078
+    KDE infl eps=0.1                     0.1708±0.010    0.0458       0.192    1.0104
+    KDE infl eps=0.2                     0.1712±0.010    0.0458       0.350    1.0154
+    scale-mix (pop limit) @fixed0.1      0.1812±0.010    0.0456       0.711    1.0290
+    scale-mix (pop limit) @infl eps=0.05   0.2195±0.010    0.0471       1.203    1.0557
+  RECURSIVE C by bandwidth rule (window 55-59): mean h | W1  C-Ref(same h) | epsR | ltau median (P(tail<1e-3 tau0)) | rv | mean w3 P(w3=0@59)
+    fixed0.075       0.075 | 0.2702   +0.0967±0.0143 | -0.0848 | +0.306 (0.000) | 0.9856 | 0.0292 0.000
+    fixed0.1         0.100 | 0.2732   +0.1005±0.0144 | -0.0850 | +0.680 (0.000) | 0.9955 | 0.0292 0.000
+    infl eps=0.025   0.103 | 0.2745   +0.1018±0.0143 | -0.0852 | +0.772 (0.000) | 0.9970 | 0.0292 0.000
+    infl eps=0.05    0.146 | 0.2953   +0.1236±0.0138 | -0.0886 | +1.142 (0.000) | 1.0208 | 0.0292 0.000
+    infl eps=0.1     0.206 | 0.3529   +0.1822±0.0127 | -0.0869 | +1.767 (0.000) | 1.0682 | 0.0292 0.000
+    infl eps=0.2     0.291 | 0.4619   +0.2907±0.0128 | -0.0386 | +2.287 (0.000) | 1.1627 | 0.0292 0.000
+  best prespecified/rule-based C: fixed0.075 W1=0.2702; best reference-only (any listed, incl. oracle-free rules): KDE infl eps=0.1 W1=0.1708; paired gap C-Ref = +0.0994±0.0145
+DONE

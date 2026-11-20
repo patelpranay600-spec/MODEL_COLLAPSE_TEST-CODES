@@ -1,0 +1,4 @@
+N_eff = N*lam*(2-lam) = 195.0
+m=20: W1(B,C)=0.2036±0.0147   iid floor n=N: 0.0695±0.0047   iid floor n=N_eff=195: 0.2061±0.0158   paired C-floor(N_eff)=-0.0024±0.0168
+m=100: W1(B,C)=0.2385±0.0177   iid floor n=N: 0.0728±0.0047   iid floor n=N_eff=195: 0.2062±0.0109   paired C-floor(N_eff)=+0.0323±0.0184
+m=400: W1(B,C)=0.2380±0.0158   iid floor n=N: 0.0737±0.0044   iid floor n=N_eff=195: 0.2478±0.0159   paired C-floor(N_eff)=-0.0098±0.0244

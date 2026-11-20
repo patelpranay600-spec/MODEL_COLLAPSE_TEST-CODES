@@ -1,0 +1,30 @@
+=== PHASE 1, EXPERIMENT 1: Gaussian scale-mixture equivalence. h=0.1, N=2000, lam=0.05, T=59; 40 paired seeds (archive seed 77001) ===
+Population identity: q_t = R*K_t with K_t=sum_{j<t} lam a^j N(0,(j+1)h^2) + a^t N(0,(t+1)h^2)   [reference-only initial law, init='ref']
+                      q_t = a^{t+1} P0*N(0,(t+1)h^2) + R*sum_{j<=t} lam a^j N(0,(j+1)h^2)   [protocol initial law a*P0+lam*R, init='P0']
+
+--- m=20
+  init=ref: W1(A,B) grid-vs-grid T=59: max over seeds 4.92e-14 (mean 1.96e-14); max|dCDF| 1.89e-15; T=400 (10 seeds) max 2.51e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 9.10e-04, W1(B_grid,B_exact) 9.10e-04
+  init=P0 : W1(A,B) grid-vs-grid T=59: max over seeds 4.70e-14 (mean 1.63e-14); max|dCDF| 1.67e-15; T=400 (10 seeds) max 4.99e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 8.83e-04, W1(B_grid,B_exact) 8.83e-04
+  init=ref: finite-N  W1(B,C)=0.2036±0.0147   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0733±0.0059   paired excess C-floor=+0.1303±0.0128
+  init=P0 : finite-N  W1(B,C)=0.1834±0.0138   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0722±0.0057   paired excess C-floor=+0.1111±0.0142
+--- m=50
+  init=ref: W1(A,B) grid-vs-grid T=59: max over seeds 4.51e-14 (mean 1.61e-14); max|dCDF| 1.55e-15; T=400 (10 seeds) max 4.00e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 5.76e-04, W1(B_grid,B_exact) 5.76e-04
+  init=P0 : W1(A,B) grid-vs-grid T=59: max over seeds 4.35e-14 (mean 1.52e-14); max|dCDF| 1.67e-15; T=400 (10 seeds) max 2.17e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 5.61e-04, W1(B_grid,B_exact) 5.61e-04
+  init=ref: finite-N  W1(B,C)=0.2161±0.0158   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0677±0.0046   paired excess C-floor=+0.1484±0.0153
+  init=P0 : finite-N  W1(B,C)=0.2295±0.0209   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0683±0.0041   paired excess C-floor=+0.1612±0.0207
+--- m=100
+  init=ref: W1(A,B) grid-vs-grid T=59: max over seeds 4.14e-14 (mean 1.39e-14); max|dCDF| 1.67e-15; T=400 (10 seeds) max 2.41e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 5.67e-04, W1(B_grid,B_exact) 5.67e-04
+  init=P0 : W1(A,B) grid-vs-grid T=59: max over seeds 4.67e-14 (mean 1.49e-14); max|dCDF| 1.78e-15; T=400 (10 seeds) max 2.49e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 5.52e-04, W1(B_grid,B_exact) 5.52e-04
+  init=ref: finite-N  W1(B,C)=0.2385±0.0177   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0808±0.0054   paired excess C-floor=+0.1576±0.0184
+  init=P0 : finite-N  W1(B,C)=0.2515±0.0167   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0756±0.0055   paired excess C-floor=+0.1758±0.0165
+--- m=200
+  init=ref: W1(A,B) grid-vs-grid T=59: max over seeds 5.18e-14 (mean 1.55e-14); max|dCDF| 1.67e-15; T=400 (10 seeds) max 1.82e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 4.86e-04, W1(B_grid,B_exact) 4.86e-04
+  init=P0 : W1(A,B) grid-vs-grid T=59: max over seeds 3.47e-14 (mean 1.33e-14); max|dCDF| 1.67e-15; T=400 (10 seeds) max 2.82e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 4.72e-04, W1(B_grid,B_exact) 4.72e-04
+  init=ref: finite-N  W1(B,C)=0.2237±0.0192   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0751±0.0045   paired excess C-floor=+0.1486±0.0195
+  init=P0 : finite-N  W1(B,C)=0.2193±0.0132   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0833±0.0051   paired excess C-floor=+0.1360±0.0122
+--- m=400
+  init=ref: W1(A,B) grid-vs-grid T=59: max over seeds 5.15e-14 (mean 1.46e-14); max|dCDF| 1.78e-15; T=400 (10 seeds) max 3.25e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 2.87e-04, W1(B_grid,B_exact) 2.87e-04
+  init=P0 : W1(A,B) grid-vs-grid T=59: max over seeds 3.60e-14 (mean 1.48e-14); max|dCDF| 1.44e-15; T=400 (10 seeds) max 3.07e-14; vs analytic CDF (5 seeds): W1(A,B_exact) 2.81e-04, W1(B_grid,B_exact) 2.81e-04
+  init=ref: finite-N  W1(B,C)=0.2380±0.0158   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0720±0.0044   paired excess C-floor=+0.1661±0.0166
+  init=P0 : finite-N  W1(B,C)=0.2328±0.0142   iid-N floor W1(B, KDE_h of N iid draws from the pre-smoothing law of B)=0.0819±0.0054   paired excess C-floor=+0.1509±0.0159
+DONE

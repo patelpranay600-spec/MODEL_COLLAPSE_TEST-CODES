@@ -1,0 +1,32 @@
+n 300 seeds 1001 - 1300
+deterministic coupled check max |D_N-D_H| = 1.4210854715202004e-14 PASS
+
+kappa=0.3
+ endpoint  mean(N-H)  s_d   feasible(0.190 s_d<=Delta)  Delta   90% CI   TOST equivalent   [role]
+ ltau     +0.0020  0.1765     True    0.112 [-0.0149,+0.0188]     True   primary
+ etot     +0.0405  0.5045     True    0.100 [-0.0075,+0.0886]     True   primary-pre-classified-inconclusive
+ W1       +0.0152  0.1278     True    0.040 [+0.0030,+0.0273]     True   secondary(W1, feasible)
+ rv       +0.0205  0.2082    False    0.025 [+0.0006,+0.0403]    False   secondary-inconclusive-by-design
+ eR       +0.0338  0.5193    False    0.050 [-0.0157,+0.0833]    False   secondary-inconclusive-by-design
+
+kappa=0.6
+ endpoint  mean(N-H)  s_d   feasible(0.190 s_d<=Delta)  Delta   90% CI   TOST equivalent   [role]
+ ltau     +0.0049  0.1883     True    0.112 [-0.0131,+0.0228]     True   primary
+ etot     +0.0544  0.5040     True    0.100 [+0.0064,+0.1024]    False   primary
+ W1       +0.0106  0.1438     True    0.040 [-0.0031,+0.0243]     True   secondary(W1, feasible)
+ rv       +0.0101  0.1958    False    0.025 [-0.0086,+0.0287]    False   secondary-inconclusive-by-design
+ eR       +0.0352  0.5031    False    0.050 [-0.0128,+0.0831]    False   secondary-inconclusive-by-design
+
+kappa=0.9
+ endpoint  mean(N-H)  s_d   feasible(0.190 s_d<=Delta)  Delta   90% CI   TOST equivalent   [role]
+ ltau     -0.0133  0.2163     True    0.112 [-0.0339,+0.0073]     True   primary
+ etot     -0.0406  0.5082     True    0.100 [-0.0890,+0.0079]     True   primary
+ W1       -0.0078  0.1399     True    0.040 [-0.0211,+0.0055]     True   secondary(W1, feasible)
+ rv       -0.0197  0.1971    False    0.025 [-0.0384,-0.0009]    False   secondary-inconclusive-by-design
+ eR       -0.0444  0.4947    False    0.050 [-0.0915,+0.0027]    False   secondary-inconclusive-by-design
+
+IU per kappa over primary endpoints {ltau, etot}:
+ kappa=0.3: not claimable as primary IU (etot pre-classified inconclusive); ltau equivalent = True
+ kappa=0.6: IU equivalence = False
+ kappa=0.9: IU equivalence = True
+H1 overall (IU over kappa=0.6 and 0.9, both endpoints): False

@@ -1,0 +1,11 @@
+lam=0.05 h=0.6 T=59: max|formula-grid| = 7.43e-05
+ leakage into R3 by lineage [k=1,2,3]: [0.00354 0.02207 0.02557]  share of own lineage: [0.0051 0.0818 0.8524]
+ own-region retention A[3,3]/omega_3 = 0.8524  rare-region mass 0.05119 inflow 0.02561
+lam=0.02 h=0.3 T=149: max|formula-grid| = 6.35e-05
+ leakage into R3 by lineage [k=1,2,3]: [0.00098 0.01389 0.02678]  share of own lineage: [0.0014 0.0514 0.8928]
+ own-region retention A[3,3]/omega_3 = 0.8928  rare-region mass 0.04165 inflow 0.01486
+lam=0.05 h=0.6 T=800: max|formula-grid| = 7.41e-05
+ leakage into R3 by lineage [k=1,2,3]: [0.00424 0.02242 0.02554]  share of own lineage: [0.0061 0.083  0.8514]
+ own-region retention A[3,3]/omega_3 = 0.8514  rare-region mass 0.0522 inflow 0.02666
+one-step P(enter R3) from x=2: h=0.6,sigma=0.0: 1.1803445032874586e-09
+one-step P(enter R3) from x=2: h=0.6,sigma=0.5: 2.2492894602211308e-06

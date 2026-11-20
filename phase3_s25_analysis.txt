@@ -1,0 +1,45 @@
+n seeds 30
+clamped 7 unclamped 23
+
+Means over seeds (R window): W1, tau, rho3, rv
+C        1.0328 0.1204 0.0508 1.7827
+R_h      0.3124 0.0125 0.0297 1.0140
+R_loo    0.3165 0.0119 0.0297 1.0117
+R_match  0.3626 0.0215 0.0298 1.0543
+R_eff    0.3274 0.0151 0.0297 1.0262
+B_orig   0.3858 0.0210 0.0292 1.0477
+B_match  0.3546 0.0148 0.0284 1.0080
+
+H-S1: share of B_orig tail excess explained by R_match
+ ratio of means 1.0606105930510843 CI(boot of ratio) [1.02022848 1.12012455]
+ B_orig-R_match W1 mean 0.0232 CI [0.00439642 0.04214094] corr tail 0.9945411000423532
+
+H-S2a tail guard (unclamped): ratio<=1.35
+ unclamped: mean ratio 0.981 frac<=1.35 1.00; frac |dtau|<=0.0045 1.00
+ clamped: mean ratio 2.221 frac<=1.35 0.14; frac |dtau|<=0.0045 0.14
+ all: mean ratio 1.270 frac<=1.35 0.80; frac |dtau|<=0.0045 0.80
+ B_orig ratio unclamped 1.5182982577185395 frac<=1.35 0.43478260869565216
+
+H-S2b rho3 guard |rho3(B_match)-rho3(R_h)|<=0.015 (unclamped)
+ frac 0.782608695652174 mean 0.009853798601817293
+
+H-S2c TOST W1(B_match) vs R_eff, all seeds, margin 0.040: mean,lo90,hi90,equiv
+(np.float64(0.027143065485695485), np.float64(0.00556903352227759), np.float64(0.04871709744911338), np.False_)
+ secondary vs R_h unclamped: (np.float64(0.03791747404762298), np.float64(0.011311397765946293), np.float64(0.06452355032929967), np.False_)
+
+Superiority checks (paired W1, B_match minus ref):
+ vs R_h: +0.0421 CI [0.01552456 0.06752761]
+ vs R_loo: +0.0381 CI [0.01272364 0.06408159]
+ vs R_eff: +0.0271 CI [0.00313801 0.05250115]
+ vs C (different learner): -0.6783 [-0.75522195 -0.60655425]
+
+Trajectory W1 (t=1,5,10,20): C, B_orig, B_match, R_h
+1 0.260 0.294 0.246 0.312
+5 0.523 0.351 0.309 0.312
+10 0.684 0.378 0.343 0.312
+20 0.851 0.405 0.357 0.312
+
+Ancestry A (signed conditional, mean): A33 C, B_orig, B_match
+C 0.8532816951497482
+B_orig 0.7348824820865949
+B_match 0.7783309066469009

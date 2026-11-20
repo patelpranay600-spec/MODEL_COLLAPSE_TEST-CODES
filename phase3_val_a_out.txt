@@ -1,0 +1,20 @@
+V18(a,b): analytic vs finite-difference / posterior mean
+ max rel err (where |score|>1e-3): 2.03e-05 ; max abs err small-score: 1.50e-08 ; max |D_s - posterior mean|: 5.78e-12
+V18(c): DSM stationarity [MC]
+  J(shat)=0.57302 ; perturbed J: [0.57392 0.57316 0.57319 0.574  ] ; all larger: True
+V18(d): stability at extreme separation
+  finite: True True
+V19: s_min by LOO likelihood
+  m=20: s_min median 0.789 [min 0.253, max 2.458]; interior 20/20; Silverman median 1.574
+  m=100: s_min median 0.505 [min 0.380, max 1.092]; interior 20/20; Silverman median 1.233
+  m=400: s_min median 0.351 [min 0.253, max 0.447]; interior 20/20; Silverman median 0.922
+V20: S-NP score vs population score of P0*N_s (mean |err| by region, 10 refs); rare-mode score sign at x=8 when ref holds no rare pt
+  m= 20 s=0.3  mean|err| R1 8.576 R2 8.074 R3 36.271 ; no-rare refs 5/10, mean score at x=8: -58.119 ; true score at 8: -0.000
+  m= 20 s=1.0  mean|err| R1 0.330 R2 0.407 R3 2.837 ; no-rare refs 5/10, mean score at x=8: -5.277 ; true score at 8: -0.001
+  m= 20 s=3.0  mean|err| R1 0.023 R2 0.050 R3 0.218 ; no-rare refs 5/10, mean score at x=8: -0.674 ; true score at 8: -0.376
+  m=100 s=0.3  mean|err| R1 4.016 R2 3.991 R3 18.403 ; no-rare refs 2/10, mean score at x=8: -55.507 ; true score at 8: -0.000
+  m=100 s=1.0  mean|err| R1 0.114 R2 0.185 R3 1.257 ; no-rare refs 2/10, mean score at x=8: -5.156 ; true score at 8: -0.001
+  m=100 s=3.0  mean|err| R1 0.013 R2 0.030 R3 0.106 ; no-rare refs 2/10, mean score at x=8: -0.662 ; true score at 8: -0.376
+  m=400 s=0.3  mean|err| R1 2.456 R2 1.990 R3 4.522 ; no-rare refs 0/10, mean score at x=8: n/a ; true score at 8: -0.000
+  m=400 s=1.0  mean|err| R1 0.077 R2 0.091 R3 0.123 ; no-rare refs 0/10, mean score at x=8: n/a ; true score at 8: -0.001
+  m=400 s=3.0  mean|err| R1 0.006 R2 0.013 R3 0.020 ; no-rare refs 0/10, mean score at x=8: n/a ; true score at 8: -0.376

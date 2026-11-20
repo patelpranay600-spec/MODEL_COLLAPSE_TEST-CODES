@@ -1,0 +1,35 @@
+V21: ULA stationary variance, Gaussian N(0,v), 1e5 chains x 200 steps
+  alpha/v=0.05  sample var 1.7328  predicted 1.7215  rel diff 0.658%
+  alpha/v=0.20  sample var 1.8022  predicted 1.7895  rel diff 0.711%
+  alpha/v=0.50  sample var 1.9555  predicted 1.9429  rel diff 0.650%
+1 30 1 s
+2 30 1 s
+3 30 2 s
+4 30 2 s
+5 30 3 s
+6 30 3 s
+7 30 4 s
+8 30 4 s
+9 30 5 s
+10 30 5 s
+11 30 7 s
+12 30 8 s
+13 30 10 s
+14 30 11 s
+15 30 13 s
+16 30 14 s
+17 30 16 s
+18 30 17 s
+19 30 19 s
+20 30 19 s
+21 30 30 s
+22 30 31 s
+23 30 41 s
+24 30 41 s
+25 30 51 s
+26 30 52 s
+27 30 62 s
+28 30 63 s
+29 30 73 s
+30 30 73 s
+done

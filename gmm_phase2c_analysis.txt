@@ -1,0 +1,4 @@
+K3, m=100, N=20000, pure recursion R2, T=60, 20 seeds (same references). growth = late(51-60) - t=1.
+default EM (Phase 2b, n_init=1)    W1 growth +0.118±0.021   |epsR| growth +0.226±0.046   P(rare) t=1 0.30 -> late 0.00   late ltau median -1.04  late modes 2.78
+tight EM (n_init=3, tol=1e-6)      W1 growth +0.116±0.022   |epsR| growth +0.072±0.048   P(rare) t=1 0.60 -> late 0.15   late ltau median -0.05  late modes 2.25
+warm-started EM (tol=1e-6)         W1 growth +0.048±0.026   |epsR| growth +0.098±0.052   P(rare) t=1 0.65 -> late 0.63   late ltau median +0.06  late modes 3.00

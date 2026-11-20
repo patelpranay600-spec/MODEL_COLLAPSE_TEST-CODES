@@ -1,0 +1,46 @@
+n 30
+
+R-window means: W1 rho3 tau rv
+C     0.9902 0.0465 0.1184 1.7527
+S     0.9734 0.0497 0.1226 1.7869
+DR    0.5210 0.0295 0.0209 0.9647
+V     0.7249 0.0056 0.0289 0.7534
+DR*   0.1562 0.0302 0.0122 1.0419
+V*    0.6459 0.0039 0.0168 0.7097
+R_h   0.3254 0.0247 0.0114 0.9756
+R_hS  0.1718 0.0297 0.0113 1.0346
+
+PRIMARY W1 contrasts (paired; Holm over 6): diff, 95% boot CI, p, Holm p
+ DR-C: -0.4692 [-0.5168 -0.4216] p=0.0000 holm=0.0000
+ V-C: -0.2652 [-0.3505 -0.1694] p=0.0000 holm=0.0000
+ S-C: -0.0168 [-0.0762  0.0447] p=0.6011 holm=0.6011
+ DR-R_h: +0.1956 [0.1602 0.2294] p=0.0000 holm=0.0000
+ V-R_h: +0.3995 [0.3295 0.4734] p=0.0000 holm=0.0000
+ S-R_hS: +0.8016 [0.7555 0.849 ] p=0.0000 holm=0.0000
+
+TOST vs matched R (margin 0.040, 90% CI): mean, lo, hi, equiv, paired SD
+ DR: +0.1956 +0.1648 +0.2264 equiv=False sd=0.0993
+ V: +0.3995 +0.3363 +0.4628 equiv=False sd=0.2038
+ S: +0.8016 +0.7602 +0.8429 equiv=False sd=0.1332
+
+SECONDARY (descriptive): R_hS-R_h, S-R_h
+ R_hS-R_h: -0.1535 [-0.1966 -0.1128]
+ S-R_h: +0.6480 [0.5862 0.7076]
+
+GUARDS (point-estimate: fail if >10% of seeds, i.e. >=4/30; Wilson 95% reported)
+ C    matched=R_h: variance 0/30 fail [-0.    0.11] ok; region3 22/30 fail [0.56 0.86] FAIL; tail 30/30 fail [0.89 1.  ] FAIL
+ DR   matched=R_h: variance 0/30 fail [-0.    0.11] ok; region3 0/30 fail [-0.    0.11] ok; tail 26/30 fail [0.7  0.95] FAIL
+ V    matched=R_h: variance 0/30 fail [-0.    0.11] ok; region3 16/30 fail [0.36 0.7 ] FAIL; tail 29/30 fail [0.83 0.99] FAIL
+ S    matched=R_hS: variance 10/30 fail [0.19 0.51] FAIL; region3 19/30 fail [0.46 0.78] FAIL; tail 30/30 fail [0.89 1.  ] FAIL
+ DR*  matched=R_h: variance 0/30 fail [-0.    0.11] ok; region3 15/30 fail [0.33 0.67] FAIL; tail 8/30 fail [0.14 0.44] FAIL
+ V*   matched=R_h: variance 0/30 fail [-0.    0.11] ok; region3 21/30 fail [0.52 0.83] FAIL; tail 19/30 fail [0.46 0.78] FAIL
+
+DIAGNOSTICS
+ DR: mean ESS 9412/9500, clipped frac 0.0000
+ DR*: mean ESS 9038/9500, clipped frac 0.0000
+ V: mean acceptance 0.9703, min per-gen 0.9171
+ V*: mean acceptance 0.9787, min per-gen 0.9616
+ all finite: True
+
+ANCESTRY A33 (reported only): {'C': 0.866, 'S': 0.861, 'DR': 0.81, 'V': 0.987, 'DR*': 1.0, 'V*': 1.0}
+seeds with no rare ref point: uniform 4 S 0

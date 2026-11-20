@@ -1,0 +1,46 @@
+=== R4-A  lineage chain: exact vs approximate stationary variance ===
+fixed-ref N=2000 lam=0.05 p=0.0300: mean 0.03007 (p) var emp 1.4244e-04 exact 1.4108e-04 approx 1.4177e-04
+resample-ref N=2000 lam=0.05 p=0.0300: mean 0.03001 var emp 1.4960e-04 formula 1.4851e-04
+fixed-ref N=2000 lam=0.1 p=0.0300: mean 0.02994 (p) var emp 6.8096e-05 exact 6.8758e-05 approx 6.8921e-05
+resample-ref N=2000 lam=0.1 p=0.0300: mean 0.03000 var emp 7.6813e-05 formula 7.6398e-05
+fixed-ref N=100 lam=0.2 p=0.0500: mean 0.04986 (p) var emp 1.0408e-03 exact 1.0326e-03 approx 1.0556e-03
+resample-ref N=100 lam=0.2 p=0.0500: mean 0.05014 var emp 1.2944e-03 formula 1.2908e-03
+fixed-ref N=100 lam=0.4 p=0.0500: mean 0.05002 (p) var emp 4.4486e-04 exact 4.4118e-04 approx 4.4531e-04
+resample-ref N=100 lam=0.4 p=0.0500: mean 0.04990 var emp 7.2638e-04 formula 7.3529e-04
+transient t=30: emp mean 0.026845 formula 0.026780
+
+=== R4-B  lineage-resolved population operator on grid ===
+lam=0.05 h=0.6 T=59 target-averaged: max|sum_k q_k - Q| = 1.67e-16
+ A[k,r] (rows=ancestry, cols=region):
+[[6.1260e-01 8.3880e-02 3.5300e-03]
+ [4.9010e-02 1.9897e-01 2.2020e-02]
+ [1.8000e-04 4.2500e-03 2.5570e-02]]
+ row sums [0.7  0.27 0.03]  col sums [0.66179 0.28709 0.05112]  region mass of Q [0.66179 0.28709 0.05112]
+ region mass of P0: [0.69982 0.27018 0.03   ]
+lam=0.02 h=0.3 T=149 target-averaged: max|sum_k q_k - Q| = 1.11e-16
+ A[k,r] (rows=ancestry, cols=region):
+[[6.3740e-01 6.1630e-02 9.7000e-04]
+ [3.8070e-02 2.1808e-01 1.3850e-02]
+ [5.0000e-05 3.1700e-03 2.6780e-02]]
+ row sums [0.7  0.27 0.03]  col sums [0.67552 0.28288 0.0416 ]  region mass of Q [0.67552 0.28288 0.0416 ]
+ region mass of P0: [0.69982 0.27018 0.03   ]
+seed 0: pi_hat=[0.75 0.22 0.03]  mass q^(k)_T=[0.74758 0.22242 0.03   ]  predicted pi_hat+a^T(pi-pi_hat)=[0.74758 0.22242 0.03   ]
+   max|sum q - Q_cond| = 1.11e-16
+seed 1: pi_hat=[0.67 0.32 0.01]  mass q^(k)_T=[0.67145 0.31758 0.01097]  predicted pi_hat+a^T(pi-pi_hat)=[0.67145 0.31758 0.01097]
+   max|sum q - Q_cond| = 1.25e-16
+seed 2: pi_hat=[0.68 0.31 0.01]  mass q^(k)_T=[0.68097 0.30806 0.01097]  predicted pi_hat+a^T(pi-pi_hat)=[0.68097 0.30806 0.01097]
+   max|sum q - Q_cond| = 1.39e-16
+
+=== R4-C  seed-conditional fixed point vs target-averaged: W1 bound ===
+lam=0.05 h=0.6: m, E W1(Pref,P0), E W1(Q*_ref,Q*), bound holds in all draws
+   20 0.7165 0.5356 True
+   50 0.4515 0.3307 True
+   100 0.3285 0.2496 True
+   200 0.2538 0.1922 True
+   400 0.1688 0.1342 True
+lam=0.02 h=0.3: m, E W1(Pref,P0), E W1(Q*_ref,Q*), bound holds in all draws
+   20 0.7165 0.5572 True
+   50 0.4515 0.3445 True
+   100 0.3285 0.2579 True
+   200 0.2538 0.1991 True
+   400 0.1688 0.1381 True

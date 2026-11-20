@@ -1,0 +1,34 @@
+stage1: 30 seeds. s_min median 0.526 range 0.27-1.09; refs with no rare point: 2
+rule changed a nominal s0 (s_min > nominal): {'1.0': 5, '2.5': 0} ; deduplicated settings (seeds with <3 s0 values): 5
+tail mass reference points: target 0.004533 | smoothing floor P0*N_0.6 0.01238 | amended ceiling 0.0248 | R_h mean 0.0129 | R_loo mean 0.0144
+C (uncorrected) R-window means: W1 0.988 rho3 0.0513 tau 0.1194 rv 1.800 | R_h W1 0.338 | R_loo W1 0.348
+
+GUARDRAIL failure rates (fraction of evaluated seeds; Wilson 95%) — variance | tail | region-3 | any ; tail ceiling AMENDED to 0.0248 (Section 20.B; original 0.009 shown as 'orig tail'); elimination if any single lower bound > 0.10
+ s0=smin c=0.05 L,K=10,10 n=30 | var 0.00 [-0.00,0.11] | tail 0.57 [0.39,0.73] | R3 0.13 [0.05,0.30] | any 0.67 | orig tail(0.009) 1.00 | finite True | ELIMINATE
+ s0=1.0  c=0.05 L,K=10,10 n=25 | var 0.00 [0.00,0.13] | tail 0.72 [0.52,0.86] | R3 0.44 [0.27,0.63] | any 0.80 | orig tail(0.009) 1.00 | finite True | ELIMINATE
+ s0=2.5  c=0.05 L,K=10,10 n=30 | var 0.17 [0.07,0.34] | tail 1.00 [0.89,1.00] | R3 0.67 [0.49,0.81] | any 1.00 | orig tail(0.009) 1.00 | finite True | ELIMINATE
+ s0=smin c=0.2  L,K=10,10 n=30 | var 0.00 [-0.00,0.11] | tail 0.47 [0.30,0.64] | R3 0.37 [0.22,0.54] | any 0.60 | orig tail(0.009) 0.97 | finite True | ELIMINATE
+ s0=1.0  c=0.2  L,K=10,10 n=25 | var 0.00 [0.00,0.13] | tail 0.40 [0.23,0.59] | R3 0.28 [0.14,0.48] | any 0.60 | orig tail(0.009) 0.96 | finite True | ELIMINATE
+ s0=2.5  c=0.2  L,K=10,10 n=30 | var 0.00 [-0.00,0.11] | tail 0.63 [0.46,0.78] | R3 0.43 [0.27,0.61] | any 0.80 | orig tail(0.009) 1.00 | finite True | ELIMINATE
+ s0=smin c=0.05 L,K=20,20 n=30 | var 0.00 [-0.00,0.11] | tail 0.43 [0.27,0.61] | R3 0.43 [0.27,0.61] | any 0.63 | orig tail(0.009) 0.97 | finite True | ELIMINATE
+ s0=1.0  c=0.05 L,K=20,20 n=25 | var 0.00 [0.00,0.13] | tail 0.44 [0.27,0.63] | R3 0.36 [0.20,0.55] | any 0.68 | orig tail(0.009) 0.96 | finite True | ELIMINATE
+ s0=2.5  c=0.05 L,K=20,20 n=30 | var 0.00 [-0.00,0.11] | tail 0.63 [0.46,0.78] | R3 0.43 [0.27,0.61] | any 0.83 | orig tail(0.009) 1.00 | finite True | ELIMINATE
+ s0=smin c=0.2  L,K=20,20 n=30 | var 0.00 [-0.00,0.11] | tail 0.43 [0.27,0.61] | R3 0.40 [0.25,0.58] | any 0.63 | orig tail(0.009) 0.97 | finite True | ELIMINATE
+ s0=1.0  c=0.2  L,K=20,20 n=25 | var 0.00 [0.00,0.13] | tail 0.36 [0.20,0.55] | R3 0.36 [0.20,0.55] | any 0.56 | orig tail(0.009) 0.96 | finite True | ELIMINATE
+ s0=2.5  c=0.2  L,K=20,20 n=30 | var 0.00 [-0.00,0.11] | tail 0.47 [0.30,0.64] | R3 0.40 [0.25,0.58] | any 0.63 | orig tail(0.009) 0.97 | finite True | ELIMINATE
+
+ENDPOINTS (R-window seed means) and paired differences vs C and R_h (B-C, B-R_h; mean ± se), rare-lineage transport
+ config                     | W1    | B-C            | B-R_h          | rho3   | tau    | rv    | A33 B / C  | inflow B / C | J3 B / C | wall s | updates
+ s0=smin c=0.05 LK=10x10 | 0.474 | -0.514±0.031 | +0.136±0.020 | 0.0353 | 0.0299 | 1.158 | 0.73/0.86 | 0.014/0.026 | +0.008/+0.022 |    10 | 100
+ s0=1.0  c=0.05 LK=10x10 | 0.565 | -0.433±0.039 | +0.243±0.027 | 0.0490 | 0.0318 | 1.301 | 0.46/0.85 | 0.038/0.027 | +0.019/+0.023 |    10 | 100
+ s0=2.5  c=0.05 LK=10x10 | 0.903 | -0.085±0.041 | +0.565±0.045 | 0.0670 | 0.0616 | 1.606 | 0.21/0.86 | 0.066/0.026 | +0.042/+0.022 |    10 | 100
+ s0=smin c=0.2  LK=10x10 | 0.436 | -0.553±0.033 | +0.098±0.014 | 0.0321 | 0.0242 | 1.088 | 0.63/0.86 | 0.013/0.026 | +0.005/+0.022 |    10 | 100
+ s0=1.0  c=0.2  LK=10x10 | 0.420 | -0.578±0.039 | +0.099±0.013 | 0.0369 | 0.0219 | 1.133 | 0.32/0.85 | 0.030/0.027 | +0.006/+0.023 |    10 | 100
+ s0=2.5  c=0.2  LK=10x10 | 0.498 | -0.490±0.033 | +0.160±0.022 | 0.0406 | 0.0288 | 1.203 | 0.13/0.86 | 0.040/0.026 | +0.014/+0.022 |    10 | 100
+ s0=smin c=0.05 LK=20x20 | 0.429 | -0.559±0.033 | +0.091±0.017 | 0.0326 | 0.0239 | 1.103 | 0.65/0.86 | 0.010/0.026 | +0.003/+0.022 |    40 | 400
+ s0=1.0  c=0.05 LK=20x20 | 0.404 | -0.594±0.036 | +0.083±0.020 | 0.0386 | 0.0218 | 1.152 | 0.28/0.85 | 0.030/0.027 | +0.005/+0.023 |    39 | 400
+ s0=2.5  c=0.05 LK=20x20 | 0.487 | -0.501±0.035 | +0.149±0.023 | 0.0403 | 0.0290 | 1.201 | 0.13/0.86 | 0.038/0.026 | +0.011/+0.022 |    39 | 400
+ s0=smin c=0.2  LK=20x20 | 0.408 | -0.580±0.034 | +0.070±0.013 | 0.0327 | 0.0242 | 1.098 | 0.59/0.86 | 0.012/0.026 | +0.004/+0.022 |    40 | 400
+ s0=1.0  c=0.2  LK=20x20 | 0.390 | -0.608±0.036 | +0.068±0.013 | 0.0351 | 0.0205 | 1.105 | 0.16/0.85 | 0.031/0.027 | +0.002/+0.023 |    39 | 400
+ s0=2.5  c=0.2  LK=20x20 | 0.416 | -0.572±0.035 | +0.078±0.013 | 0.0320 | 0.0247 | 1.093 | 0.11/0.86 | 0.030/0.026 | +0.003/+0.022 |    39 | 400
+(A33, inflow, J3 averaged over seeds whose reference/lineage composition makes them defined; reference-set SD not shown here)

@@ -1,0 +1,25 @@
+=== R5-2b  larger-sample rerun of the variance check (20000 chains) ===
+lam=0.1 rule=fixed: var 6.8563e-05 (se 0.5%)  ratio to V_fixed 0.997  to V_wr 0.897
+lam=0.1 rule=wr   : var 7.7047e-05 (se 0.6%)  ratio to V_fixed 1.121  to V_wr 1.008
+lam=0.2 rule=fixed: var 3.2172e-05 (se 0.6%)  ratio to V_fixed 0.996  to V_wr 0.797
+lam=0.2 rule=wr   : var 4.0092e-05 (se 0.5%)  ratio to V_fixed 1.241  to V_wr 0.993
+
+=== R5-3b  weak transporter (sensitivity), lam=0.05 h=0.6 T=59 ===
+f=0.002: predicted Delta A[label1, R3]=0.02004  (= 66.8% of the target rare-region mass 0.03); empirical 0.01993 (se 0.00019)  detection z=103.2; Delta A[label3,R3] empirical 0.00013 (se 0.00023), z=0.6
+   full predicted Delta A:
+ [[-0.01875 -0.00129  0.02004]
+ [ 0.       0.       0.     ]
+ [ 0.       0.       0.     ]] 
+   empirical:
+ [[-0.01837 -0.00101  0.01993]
+ [ 0.00007 -0.00052 -0.00026]
+ [-0.00002  0.00006  0.00013]]
+f=0.0005: predicted Delta A[label1, R3]=0.00512  (= 17.1% of the target rare-region mass 0.03); empirical 0.00511 (se 0.00013)  detection z=40.5; Delta A[label3,R3] empirical 0.00013 (se 0.00023), z=0.6
+   full predicted Delta A:
+ [[-0.00479 -0.00033  0.00512]
+ [ 0.       0.       0.     ]
+ [ 0.       0.       0.     ]] 
+   empirical:
+ [[-0.00359 -0.00053  0.00511]
+ [-0.00005 -0.00072 -0.00027]
+ [-0.00003 -0.00006  0.00013]]

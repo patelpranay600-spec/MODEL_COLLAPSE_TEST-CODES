@@ -1,0 +1,23 @@
+INVARIANTS (5 seeds, T=5, m=100, N=2000, n_ref=100, synthetic draws per generation = 1900)
+ C   |D|=N:True ref draws from retained set:True labels in {0,1,2}:True finite:True  retained m=100 sum w=1.000000
+ S   |D|=N:True ref draws from retained set:True labels in {0,1,2}:True finite:True  retained m=100 sum w=1.000000
+ DR  |D|=N:True ref draws from retained set:True labels in {0,1,2}:True finite:True  retained m=100 sum w=1.000000
+ V   |D|=N:True ref draws from retained set:True labels in {0,1,2}:True finite:True  retained m=100 sum w=1.000000
+ B   |D|=N:True ref draws from retained set:True labels in {0,1,2}:True finite:True  retained m=100 sum w=1.000000
+ DR* |D|=N:True ref draws from retained set:True labels in {0,1,2}:True finite:True  retained m=100 sum w=1.000000
+ V*  |D|=N:True ref draws from retained set:True labels in {0,1,2}:True finite:True  retained m=100 sum w=1.000000
+ R   |D|=N:True ref draws from retained set:True labels in {0,1,2}:True finite:True  retained m=100 sum w=1.000000
+same retained set as C (uniform): DR:True, V:True, B:True, DR*:True, V*:True, R:True ; S differs by design: True
+same generation-1 synthetic input Y across C,B,DR,V,S (common random numbers): {'B': True, 'S': False, 'DR': True, 'V': True, 'DR*': True, 'V*': True}
+
+COMPUTE per run (T=5, mean over seeds): wall s | score evals | kernel evals | langevin steps | kde draws | candidate draws | classifier fits | oracle target evals
+ C      0.00 | 0.00e+00 | 0.00e+00 | 0.00e+00 | 9500 | 0 | 0 | 0
+ S      0.00 | 0.00e+00 | 0.00e+00 | 0.00e+00 | 9500 | 0 | 0 | 0
+ DR     0.19 | 0.00e+00 | 0.00e+00 | 0.00e+00 | 57000 | 97500 | 25 | 0
+ V      0.01 | 0.00e+00 | 1.95e+06 | 0.00e+00 | 76000 | 66500 | 0 | 0
+ B      0.91 | 9.50e+07 | 0.00e+00 | 9.50e+05 | 9500 | 0 | 0 | 0
+ DR*    0.52 | 0.00e+00 | 9.50e+07 | 0.00e+00 | 57000 | 47500 | 0 | 47500
+ V*     0.03 | 0.00e+00 | 0.00e+00 | 0.00e+00 | 76000 | 66500 | 0 | 19000
+ R      0.00 | 0.00e+00 | 0.00e+00 | 0.00e+00 | 0 | 0 | 0 | 0
+
+s_min used by V/B (median over seeds): 0.526

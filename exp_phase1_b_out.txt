@@ -1,0 +1,23 @@
+=== PHASE 1, EXPERIMENT 2: lineage-resolved finite-N analysis. h=0.1, protocol initial law, with-replacement reference rule, T=59, 400 seeds (seed 77003) ===
+
+--- m=20: seeds=400; P(no rare point in retained set)=0.557; P(rare in set, lineage absent at t=59)=0.000; P(rare in set, ever absent at some t)=0.000; P(survives)=0.443
+  category                      n    mean w59 (pop pred)  | W1 pop   W1 C   | epsR pop   epsR C   | ltau pop  ltau C(median) | survivors: own-region retention rho3 emp vs pop (diff±se)   frac label-3 points outside R3
+  (i) no rare lineage in set      223  0.0014 (0.0014)  | 0.656   0.693  | -0.953    -0.954   | -0.17    -0.49
+  (ii) rare in set, lost by t=59 0
+  (iii) rare lineage survives     177  0.0663 (0.0652)  | 0.717   0.755  | +1.174    +1.209   | -0.04    -0.10   | 0.999 vs 0.999  (-0.0001±0.0008)  | 0.001
+  all seeds: finite-N excess W1(C)-W1(pop SC) = +0.0376±0.0073;  by category: 1: +0.0368, 3: +0.0386
+
+--- m=100: seeds=400; P(no rare point in retained set)=0.055; P(rare in set, lineage absent at t=59)=0.003; P(rare in set, ever absent at some t)=0.013; P(survives)=0.943
+  category                      n    mean w59 (pop pred)  | W1 pop   W1 C   | epsR pop   epsR C   | ltau pop  ltau C(median) | survivors: own-region retention rho3 emp vs pop (diff±se)   frac label-3 points outside R3
+  (i) no rare lineage in set       22  0.0015 (0.0014)  | 0.363   0.444  | -0.953    -0.949   | +0.44    +0.37
+  (ii) rare in set, lost by t=59    1  0.0000 (0.0109)  | 0.300   0.303  | -0.635    -1.000   | -0.20    -1.30
+  (iii) rare lineage survives     377  0.0322 (0.0309)  | 0.302   0.379  | +0.030    +0.074   | +0.42    +0.40   | 1.000 vs 0.999  (+0.0008±0.0001)  | 0.000
+  all seeds: finite-N excess W1(C)-W1(pop SC) = +0.0775±0.0065;  by category: 1: +0.0809, 2: +0.0034, 3: +0.0775
+
+--- m=400: seeds=400; P(no rare point in retained set)=0.000; P(rare in set, lineage absent at t=59)=0.000; P(rare in set, ever absent at some t)=0.003; P(survives)=1.000
+  category                      n    mean w59 (pop pred)  | W1 pop   W1 C   | epsR pop   epsR C   | ltau pop  ltau C(median) | survivors: own-region retention rho3 emp vs pop (diff±se)   frac label-3 points outside R3
+  (i) no rare lineage in set     0
+  (ii) rare in set, lost by t=59 0
+  (iii) rare lineage survives     400  0.0303 (0.0300)  | 0.170   0.283  | +0.001    +0.011   | +0.59    +0.43   | 0.999 vs 0.999  (+0.0005±0.0003)  | 0.001
+  all seeds: finite-N excess W1(C)-W1(pop SC) = +0.1135±0.0061;  by category: 3: +0.1135
+DONE

@@ -1,0 +1,42 @@
+=== R5-2  full KDE chain: stationary variance of lineage fraction vs V_fixed and V_wr ===
+lam=0.05 m=100 p=0.0300 rule=fixed: mean 0.03023  var 1.4567e-04 (bootstrap se 2.4%)  ratio to V_fixed 1.033  to V_wr 0.981   [V_fixed 1.4108e-04, V_wr 1.4851e-04]  (10s)
+lam=0.05 m=100 p=0.0300 rule=wr   : mean 0.02988  var 1.4427e-04 (bootstrap se 2.2%)  ratio to V_fixed 1.023  to V_wr 0.971   [V_fixed 1.4108e-04, V_wr 1.4851e-04]  (8s)
+lam=0.1 m=200 p=0.0300 rule=fixed: mean 0.03013  var 6.7735e-05 (bootstrap se 2.0%)  ratio to V_fixed 0.985  to V_wr 0.887   [V_fixed 6.8758e-05, V_wr 7.6398e-05]  (6s)
+lam=0.1 m=200 p=0.0300 rule=wr   : mean 0.02975  var 7.5120e-05 (bootstrap se 2.0%)  ratio to V_fixed 1.093  to V_wr 0.983   [V_fixed 6.8758e-05, V_wr 7.6398e-05]  (7s)
+lam=0.2 m=400 p=0.0300 rule=fixed: mean 0.02994  var 3.1728e-05 (bootstrap se 1.9%)  ratio to V_fixed 0.982  to V_wr 0.786   [V_fixed 3.2297e-05, V_wr 4.0372e-05]  (3s)
+lam=0.2 m=400 p=0.0300 rule=wr   : mean 0.03001  var 3.8426e-05 (bootstrap se 1.9%)  ratio to V_fixed 1.190  to V_wr 0.952   [V_fixed 3.2297e-05, V_wr 4.0372e-05]  (4s)
+
+=== R5-3  transition-matrix controls, lam=0.05 h=0.6 T=59 N=2000 m=100, fixed reference set ===
+retained set label counts: [72 27  1]
+NEGATIVE control (non-transporting arm C): empirical mean A - seed-conditional comparator A_SC (Delta A):
+ [[ 0.00005 -0.00004  0.00018]
+ [-0.00016 -0.00004 -0.00007]
+ [-0.00001 -0.00001  0.00009]] 
+ se:
+ [[0.00077 0.00037 0.00009]
+ [0.00033 0.00057 0.00024]
+ [0.00002 0.00007 0.00016]] 
+ z:
+ [[ 0.07 -0.1   1.98]
+ [-0.48 -0.07 -0.28]
+ [-0.63 -0.09  0.56]] 
+ max|z|=1.98, sum z^2=5.0 (9 cells)
+POSITIVE control (transporter, f=0.2 of label-1 synthetic points moved to N(8,0.6^2) each generation):
+ predicted Delta A (transporter - C), from grid:
+ [[-0.49354 -0.05055  0.54409]
+ [ 0.       0.       0.     ]
+ [ 0.       0.       0.     ]]
+ empirical Delta A (transporter chains - SC comparator):
+ [[-0.49372 -0.05054  0.54456]
+ [-0.0005  -0.00022  0.00036]
+ [ 0.00002  0.00005 -0.     ]]
+ empirical vs predicted transporter A, z:
+ [[-0.68  0.03  0.59]
+ [-1.5  -0.38  1.45]
+ [ 1.43  0.69 -0.03]] 
+ max|z|=1.50, sum z^2=7.8
+ detection z of empirical Delta A against 0 (cells):
+ [[-1851.   -466.2   690.7]
+ [   -1.5    -0.4     1.5]
+ [    1.4     0.7    -0. ]]
+ row sums emp (neg): [0.71928 0.26973 0.01099]  col sums emp (neg): [0.69061 0.27183 0.03756]

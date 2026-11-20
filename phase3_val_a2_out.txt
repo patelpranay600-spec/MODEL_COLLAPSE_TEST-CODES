@@ -1,0 +1,2 @@
+4th-order stencil h=1e-3: max rel err by s: {0.1: '2.2e-04', 0.3: '4.1e-07', 1: '5.4e-10', 3: '5.0e-10', 6: '6.9e-10'}
+vs 40-digit mpmath at s=0.1: max rel err 4.4e-16
